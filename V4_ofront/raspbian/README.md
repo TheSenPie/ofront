@@ -5,19 +5,19 @@ Run 'make' for a build.
 Look at the 'makefile' for the build process.
 
 It may be required to create a link for libX11.so. For RPi4B Raspbian issue following commands:
-`
+```bash
 ln -s /lib/arm-linux-gnueabihf/libX11.so.6 ./libX11.so
 ln -s /lib/arm-linux-gnueabihf/libm.so.6 ./libm.so
 ln -s /lib/arm-linux-gnueabihf/libc.so.6 ./libc.so
-`
+```
 
 Makefile assumes, that $PATH points to existing ofront binary. For that, download the binaries from http://www.software-templ.com/shareware.html, then extract using:
-`
+```bash
 tar xzf /path/to/binaries.tar.gz
-`
+```
 After, add the binaries to your $PATH variable, with:
-`
+```bash
 export $PATH=$PATH:/path/to/ofront/bin
-`
+```
 
 Finally, when building the binaries it may fail on libspi step, since ofront for Raspberry Pi uses WiringPi, however its developer discontinued its support and it is not pre-installed on raspbian anymore, meaning you have to download it manually. Fortunatelly, there is an unoffical mirror for WiringPi bindings, which you can get here: https://github.com/WiringPi/WiringPi
