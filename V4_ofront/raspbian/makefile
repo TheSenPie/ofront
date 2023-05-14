@@ -114,7 +114,7 @@ libsbase:
 		OfrontOPM.Mod OfrontOPS.Mod -x OfrontOPT.Mod \
 		OfrontOPC.Mod OfrontOPV.Mod OfrontOPB.Mod\
 		OfrontOPP.Mod Ofront.Mod Compiler.Mod Browser.Mod\
-		Bitmaps.Mod XIn.Mod oberon.Mod -m
+		Bitmaps.Mod XIn.Mod oberon.Mod -m -C "-L. -Wl,-rpath-link=."
 
 libspi:
 	$(OCL) \
