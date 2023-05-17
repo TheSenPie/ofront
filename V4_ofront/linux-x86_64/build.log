@@ -1,0 +1,349 @@
+voc Platformunix.Mod Heap.Mod Out.Mod Modules.Mod Args.Mod Console.Mod
+Platformunix.Mod  Compiling Platform.  14350 chars.
+Heap.Mod  Compiling Heap.  17317 chars.
+In file included from Heap.c:8:
+Heap.c: In function ‘Heap__init’:
+SYSTEM.h:257:46: warning: ‘Heap_REGMOD’ accessing 20 bytes in a region of size 5 [-Wstringop-overflow=]
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:791:9: note: in expansion of macro ‘__REGMOD’
+  791 |         __REGMOD("Heap", EnumPtrs);
+      |         ^~~~~~~~
+SYSTEM.h:257:46: note: referencing argument 1 of type ‘CHAR[20]’ {aka ‘unsigned char[20]’}
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:791:9: note: in expansion of macro ‘__REGMOD’
+  791 |         __REGMOD("Heap", EnumPtrs);
+      |         ^~~~~~~~
+Heap.c:133:12: note: in a call to function ‘Heap_REGMOD’
+  133 | SYSTEM_PTR Heap_REGMOD (Heap_ModuleName name, Heap_EnumProc enumPtrs)
+      |            ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 7 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:792:9: note: in expansion of macro ‘__REGCMD’
+  792 |         __REGCMD("FINALL", Heap_FINALL);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:792:9: note: in expansion of macro ‘__REGCMD’
+  792 |         __REGCMD("FINALL", Heap_FINALL);
+      |         ^~~~~~~~
+Heap.c:180:6: note: in a call to function ‘Heap_REGCMD’
+  180 | void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd)
+      |      ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 9 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:793:9: note: in expansion of macro ‘__REGCMD’
+  793 |         __REGCMD("InitHeap", Heap_InitHeap);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:793:9: note: in expansion of macro ‘__REGCMD’
+  793 |         __REGCMD("InitHeap", Heap_InitHeap);
+      |         ^~~~~~~~
+Heap.c:180:6: note: in a call to function ‘Heap_REGCMD’
+  180 | void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd)
+      |      ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 5 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:794:9: note: in expansion of macro ‘__REGCMD’
+  794 |         __REGCMD("Lock", Heap_Lock);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:794:9: note: in expansion of macro ‘__REGCMD’
+  794 |         __REGCMD("Lock", Heap_Lock);
+      |         ^~~~~~~~
+Heap.c:180:6: note: in a call to function ‘Heap_REGCMD’
+  180 | void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd)
+      |      ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 7 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:795:9: note: in expansion of macro ‘__REGCMD’
+  795 |         __REGCMD("Unlock", Heap_Unlock);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:795:9: note: in expansion of macro ‘__REGCMD’
+  795 |         __REGCMD("Unlock", Heap_Unlock);
+      |         ^~~~~~~~
+Heap.c:180:6: note: in a call to function ‘Heap_REGCMD’
+  180 | void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd)
+      |      ^~~~~~~~~~~
+SYSTEM.h:257:46: warning: ‘Heap_REGMOD’ accessing 20 bytes in a region of size 5 [-Wstringop-overflow=]
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:791:9: note: in expansion of macro ‘__REGMOD’
+  791 |         __REGMOD("Heap", EnumPtrs);
+      |         ^~~~~~~~
+SYSTEM.h:257:46: note: referencing argument 1 of type ‘CHAR[20]’ {aka ‘unsigned char[20]’}
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:791:9: note: in expansion of macro ‘__REGMOD’
+  791 |         __REGMOD("Heap", EnumPtrs);
+      |         ^~~~~~~~
+Heap.c:133:12: note: in a call to function ‘Heap_REGMOD’
+  133 | SYSTEM_PTR Heap_REGMOD (Heap_ModuleName name, Heap_EnumProc enumPtrs)
+      |            ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 7 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:792:9: note: in expansion of macro ‘__REGCMD’
+  792 |         __REGCMD("FINALL", Heap_FINALL);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:792:9: note: in expansion of macro ‘__REGCMD’
+  792 |         __REGCMD("FINALL", Heap_FINALL);
+      |         ^~~~~~~~
+Heap.c:180:6: note: in a call to function ‘Heap_REGCMD’
+  180 | void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd)
+      |      ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 9 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:793:9: note: in expansion of macro ‘__REGCMD’
+  793 |         __REGCMD("InitHeap", Heap_InitHeap);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:793:9: note: in expansion of macro ‘__REGCMD’
+  793 |         __REGCMD("InitHeap", Heap_InitHeap);
+      |         ^~~~~~~~
+Heap.c:180:6: note: in a call to function ‘Heap_REGCMD’
+  180 | void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd)
+      |      ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 5 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:794:9: note: in expansion of macro ‘__REGCMD’
+  794 |         __REGCMD("Lock", Heap_Lock);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:794:9: note: in expansion of macro ‘__REGCMD’
+  794 |         __REGCMD("Lock", Heap_Lock);
+      |         ^~~~~~~~
+Heap.c:180:6: note: in a call to function ‘Heap_REGCMD’
+  180 | void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd)
+      |      ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 7 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:795:9: note: in expansion of macro ‘__REGCMD’
+  795 |         __REGCMD("Unlock", Heap_Unlock);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Heap.c:795:9: note: in expansion of macro ‘__REGCMD’
+  795 |         __REGCMD("Unlock", Heap_Unlock);
+      |         ^~~~~~~~
+Heap.c:180:6: note: in a call to function ‘Heap_REGCMD’
+  180 | void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd)
+      |      ^~~~~~~~~~~
+Out.Mod  Compiling Out.  5975 chars.
+In file included from Out.c:8:
+Out.c: In function ‘Out__init’:
+SYSTEM.h:257:46: warning: ‘Heap_REGMOD’ accessing 20 bytes in a region of size 4 [-Wstringop-overflow=]
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:337:9: note: in expansion of macro ‘__REGMOD’
+  337 |         __REGMOD("Out", 0);
+      |         ^~~~~~~~
+SYSTEM.h:257:46: note: referencing argument 1 of type ‘CHAR[20]’ {aka ‘unsigned char[20]’}
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:337:9: note: in expansion of macro ‘__REGMOD’
+  337 |         __REGMOD("Out", 0);
+      |         ^~~~~~~~
+In file included from Out.c:9:
+Heap.h:66:19: note: in a call to function ‘Heap_REGMOD’
+   66 | import SYSTEM_PTR Heap_REGMOD (Heap_ModuleName name, Heap_EnumProc enumPtrs);
+      |                   ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 6 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:338:9: note: in expansion of macro ‘__REGCMD’
+  338 |         __REGCMD("Flush", Out_Flush);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:338:9: note: in expansion of macro ‘__REGCMD’
+  338 |         __REGCMD("Flush", Out_Flush);
+      |         ^~~~~~~~
+Heap.h:65:13: note: in a call to function ‘Heap_REGCMD’
+   65 | import void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd);
+      |             ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 3 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:339:9: note: in expansion of macro ‘__REGCMD’
+  339 |         __REGCMD("Ln", Out_Ln);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:339:9: note: in expansion of macro ‘__REGCMD’
+  339 |         __REGCMD("Ln", Out_Ln);
+      |         ^~~~~~~~
+Heap.h:65:13: note: in a call to function ‘Heap_REGCMD’
+   65 | import void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd);
+      |             ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 5 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:340:9: note: in expansion of macro ‘__REGCMD’
+  340 |         __REGCMD("Open", Out_Open);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:340:9: note: in expansion of macro ‘__REGCMD’
+  340 |         __REGCMD("Open", Out_Open);
+      |         ^~~~~~~~
+Heap.h:65:13: note: in a call to function ‘Heap_REGCMD’
+   65 | import void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd);
+      |             ^~~~~~~~~~~
+SYSTEM.h:257:46: warning: ‘Heap_REGMOD’ accessing 20 bytes in a region of size 4 [-Wstringop-overflow=]
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:337:9: note: in expansion of macro ‘__REGMOD’
+  337 |         __REGMOD("Out", 0);
+      |         ^~~~~~~~
+SYSTEM.h:257:46: note: referencing argument 1 of type ‘CHAR[20]’ {aka ‘unsigned char[20]’}
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:337:9: note: in expansion of macro ‘__REGMOD’
+  337 |         __REGMOD("Out", 0);
+      |         ^~~~~~~~
+Heap.h:66:19: note: in a call to function ‘Heap_REGMOD’
+   66 | import SYSTEM_PTR Heap_REGMOD (Heap_ModuleName name, Heap_EnumProc enumPtrs);
+      |                   ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 6 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:338:9: note: in expansion of macro ‘__REGCMD’
+  338 |         __REGCMD("Flush", Out_Flush);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:338:9: note: in expansion of macro ‘__REGCMD’
+  338 |         __REGCMD("Flush", Out_Flush);
+      |         ^~~~~~~~
+Heap.h:65:13: note: in a call to function ‘Heap_REGCMD’
+   65 | import void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd);
+      |             ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 3 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:339:9: note: in expansion of macro ‘__REGCMD’
+  339 |         __REGCMD("Ln", Out_Ln);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:339:9: note: in expansion of macro ‘__REGCMD’
+  339 |         __REGCMD("Ln", Out_Ln);
+      |         ^~~~~~~~
+Heap.h:65:13: note: in a call to function ‘Heap_REGCMD’
+   65 | import void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd);
+      |             ^~~~~~~~~~~
+SYSTEM.h:256:31: warning: ‘Heap_REGCMD’ accessing 24 bytes in a region of size 5 [-Wstringop-overflow=]
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:340:9: note: in expansion of macro ‘__REGCMD’
+  340 |         __REGCMD("Open", Out_Open);
+      |         ^~~~~~~~
+SYSTEM.h:256:31: note: referencing argument 2 of type ‘CHAR[24]’ {aka ‘unsigned char[24]’}
+  256 | #define __REGCMD(name, cmd)   Heap_REGCMD(m, (CHAR*)name, cmd)
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Out.c:340:9: note: in expansion of macro ‘__REGCMD’
+  340 |         __REGCMD("Open", Out_Open);
+      |         ^~~~~~~~
+Heap.h:65:13: note: in a call to function ‘Heap_REGCMD’
+   65 | import void Heap_REGCMD (Heap_Module m, Heap_CmdName name, Heap_Command cmd);
+      |             ^~~~~~~~~~~
+Modules.Mod  Compiling Modules.  12589 chars.
+In file included from Modules.c:8:
+Modules.c: In function ‘Modules__init’:
+SYSTEM.h:257:46: warning: ‘Heap_REGMOD’ accessing 20 bytes in a region of size 8 [-Wstringop-overflow=]
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Modules.c:502:9: note: in expansion of macro ‘__REGMOD’
+  502 |         __REGMOD("Modules", 0);
+      |         ^~~~~~~~
+SYSTEM.h:257:46: note: referencing argument 1 of type ‘CHAR[20]’ {aka ‘unsigned char[20]’}
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Modules.c:502:9: note: in expansion of macro ‘__REGMOD’
+  502 |         __REGMOD("Modules", 0);
+      |         ^~~~~~~~
+In file included from Modules.c:9:
+Heap.h:66:19: note: in a call to function ‘Heap_REGMOD’
+   66 | import SYSTEM_PTR Heap_REGMOD (Heap_ModuleName name, Heap_EnumProc enumPtrs);
+      |                   ^~~~~~~~~~~
+SYSTEM.h:257:46: warning: ‘Heap_REGMOD’ accessing 20 bytes in a region of size 8 [-Wstringop-overflow=]
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Modules.c:502:9: note: in expansion of macro ‘__REGMOD’
+  502 |         __REGMOD("Modules", 0);
+      |         ^~~~~~~~
+SYSTEM.h:257:46: note: referencing argument 1 of type ‘CHAR[20]’ {aka ‘unsigned char[20]’}
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Modules.c:502:9: note: in expansion of macro ‘__REGMOD’
+  502 |         __REGMOD("Modules", 0);
+      |         ^~~~~~~~
+Heap.h:66:19: note: in a call to function ‘Heap_REGMOD’
+   66 | import SYSTEM_PTR Heap_REGMOD (Heap_ModuleName name, Heap_EnumProc enumPtrs);
+      |                   ^~~~~~~~~~~
+Args.Mod  Compiling Args.  1541 chars.
+In file included from Args.c:8:
+Args.c: In function ‘Args__init’:
+SYSTEM.h:257:46: warning: ‘Heap_REGMOD’ accessing 20 bytes in a region of size 5 [-Wstringop-overflow=]
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Args.c:67:9: note: in expansion of macro ‘__REGMOD’
+   67 |         __REGMOD("Args", 0);
+      |         ^~~~~~~~
+SYSTEM.h:257:46: note: referencing argument 1 of type ‘CHAR[20]’ {aka ‘unsigned char[20]’}
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Args.c:67:9: note: in expansion of macro ‘__REGMOD’
+   67 |         __REGMOD("Args", 0);
+      |         ^~~~~~~~
+In file included from Modules.h:7,
+                 from Args.c:9:
+Heap.h:66:19: note: in a call to function ‘Heap_REGMOD’
+   66 | import SYSTEM_PTR Heap_REGMOD (Heap_ModuleName name, Heap_EnumProc enumPtrs);
+      |                   ^~~~~~~~~~~
+SYSTEM.h:257:46: warning: ‘Heap_REGMOD’ accessing 20 bytes in a region of size 5 [-Wstringop-overflow=]
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Args.c:67:9: note: in expansion of macro ‘__REGMOD’
+   67 |         __REGMOD("Args", 0);
+      |         ^~~~~~~~
+SYSTEM.h:257:46: note: referencing argument 1 of type ‘CHAR[20]’ {aka ‘unsigned char[20]’}
+  257 | #define __REGMOD(name, enum)  if (m==0) {m = Heap_REGMOD((CHAR*)name,enum);}
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Args.c:67:9: note: in expansion of macro ‘__REGMOD’
+   67 |         __REGMOD("Args", 0);
+      |         ^~~~~~~~
+Heap.h:66:19: note: in a call to function ‘Heap_REGMOD’
+   66 | import SYSTEM_PTR Heap_REGMOD (Heap_ModuleName name, Heap_EnumProc enumPtrs);
+      |                   ^~~~~~~~~~~
+Console.Mod  Compiling Console.  2803 chars.
