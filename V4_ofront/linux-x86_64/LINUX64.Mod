@@ -2,7 +2,7 @@ MODULE LINUX64;
 
 IMPORT SYSTEM;
 TYPE
-	FdSet* = ARRAY 8 OF SET;
+	FdSet* = ARRAY 32 OF SET;
 	Timeval* = RECORD
 		sec*, usec*: HUGEINT;
 	END;
@@ -13,6 +13,7 @@ VAR
 	PROCEDURE -AincludeSelect "#include <sys/select.h>";
 	PROCEDURE -UnixSelect*(width: LONGINT; VAR readfds, writefds, exceptfds: FdSet; VAR timeout: Timeval): LONGINT
 		"select(width, readfds, writefds, exceptfds, timeout)";
+
 	PROCEDURE Select*(delay: LONGINT);
 		VAR rs, ws, xs: FdSet; n: LONGINT; tv: Timeval;
 	BEGIN
