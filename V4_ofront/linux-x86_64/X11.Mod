@@ -46,7 +46,7 @@ MODULE X11;	(* RC 12.10.92, JT 13.12.94 *)
 
 		PatternPtr* = POINTER TO PatternDesc;
 
-		Pattern* = PatternPtr (* = PatternPtr *);
+		Pattern* = S.ADDRESS (* = PatternPtr *);
 
 		MetricDesc* = RECORD
 
@@ -768,11 +768,11 @@ MODULE X11;	(* RC 12.10.92, JT 13.12.94 *)
 
 			"XSetClipMask(display, gc, clipMask)";
 
-	PROCEDURE -SetClipRectangles*(display: Display; gc: GC; clipxorigin, clipyorigin, rectangles, n, ordering: LONGINT)
+	PROCEDURE -SetClipRectangles*(display: Display; gc: GC; clipxorigin, clipyorigin: LONGINT; rectangles: S.ADDRESS; n, ordering: LONGINT)
 
 			"XSetClipRectangles(display, gc, clipxorigin, clipyorigin, rectangles, n, ordering)";
 
-	PROCEDURE -ListFonts*(display: Display; pattern, maxnames: LONGINT; VAR count: LONGINT): LONGINT
+	PROCEDURE -ListFonts*(display: Display; pattern: S.ADDRESS; maxnames: LONGINT; VAR count: LONGINT): LONGINT
 
 			"(long)XListFonts(display, pattern, maxnames, count)";
 
@@ -780,7 +780,7 @@ MODULE X11;	(* RC 12.10.92, JT 13.12.94 *)
 
 			"XFreeFontNames(list)";
 
-	PROCEDURE -LoadFont*(display: Display; name: LONGINT): LONGINT
+	PROCEDURE -LoadFont*(display: Display; name: S.ADDRESS): LONGINT
 
 			"(long)XLoadFont(display, name)";
 
@@ -1058,7 +1058,7 @@ MODULE X11;	(* RC 12.10.92, JT 13.12.94 *)
 
 		pat.x := 0; pat.y := 0; pat.w := width; pat.h := height; pat.pixmap := pixmap;
 
-		RETURN pat
+		RETURN S.VAL(Pattern, pat)
 
 	END NewPattern;
 
