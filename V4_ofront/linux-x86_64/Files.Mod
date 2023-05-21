@@ -2,7 +2,6 @@ MODULE Files;  (* J. Templ 1.12. 89/12.4.95 Oberon files mapped onto Unix files 
 
   IMPORT SYSTEM, Platform, Heap, Strings, Out;
 
-
   CONST
     NumBufs = 4;
     BufSize = 4096;
@@ -755,3 +754,4 @@ BEGIN
   MaxPathLength := Platform.MaxPathLength();
   MaxNameLength := Platform.MaxNameLength();
 END Files.
+

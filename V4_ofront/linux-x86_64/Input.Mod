@@ -1,7 +1,7 @@
 MODULE Input;	(* RC 4.11.93 *)
 (* Based on X Window System Version 11 *)
 
-	IMPORT X11, Unix, Kernel, S := SYSTEM;
+	IMPORT S := SYSTEM, X11, Platform, LINUX64;
 
 	TYPE
 		MouseState = RECORD
@@ -151,7 +151,7 @@ MODULE Input;	(* RC 4.11.93 *)
 	END SetMouseLimits;
 
 	PROCEDURE Time*(): LONGINT;																						(* << *)
-	BEGIN RETURN Kernel.Time()
+	BEGIN RETURN Platform.Time()
 	END Time;
 
 	PROCEDURE Init;
@@ -238,6 +238,7 @@ MODULE Input;	(* RC 4.11.93 *)
 		(*O diaeresis*) to[0] := 081X; X11.Rebind("Odiaeresis", modlist, 0, to, 1); X11.Rebind("Odiaeresis", modlist, 1, to, 1);
 		(*U diaeresis*) to[0] := 082X; X11.Rebind("Udiaeresis", modlist, 0, to, 1); X11.Rebind("Udiaeresis", modlist, 1, to, 1);	END Init;
 
-BEGIN TimeUnit := Kernel.TimeUnit; Init
+BEGIN TimeUnit := LINUX64.TimeUnit; Init
 END Input.
+
 

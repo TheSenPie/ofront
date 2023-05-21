@@ -224,3 +224,4 @@ BEGIN
 END StrToLongReal;
 
 END Strings.
+

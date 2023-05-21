@@ -800,9 +800,9 @@ MODULE X11;	(* RC 12.10.92, JT 13.12.94 *)
 
 			"XSetInputFocus(display, focus, revertTo, time)";
 
-	PROCEDURE -LookupString*(event, buffer, bufsize: LONGINT;
+	PROCEDURE -LookupString*(event, buffer: S.ADDRESS; bufsize: LONGINT;
 
-					VAR keysym: KeySym; compstatus: LONGINT): LONGINT
+					VAR keysym: KeySym; compstatus: S.ADDRESS): LONGINT
 
 			"(long)XLookupString(event, buffer, bufsize, keysym, compstatus)";
 
@@ -812,7 +812,7 @@ MODULE X11;	(* RC 12.10.92, JT 13.12.94 *)
 
 			"XQueryPointer(display, window, rw, cw, xr, yr, xw, yw, keysButtons)";
 
-	PROCEDURE -RefreshKeyboardMapping*(event: LONGINT)
+	PROCEDURE -RefreshKeyboardMapping*(event: S.ADDRESS)
 
 			"XRefreshKeyboardMapping(event)";
 

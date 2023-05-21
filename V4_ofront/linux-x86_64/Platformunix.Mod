@@ -445,3 +445,4 @@ BEGIN
   NL[0] := 0AX; (* LF *)
   NL[1] := 0X;
 END Platform.
+

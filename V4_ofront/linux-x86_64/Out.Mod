@@ -225,3 +225,4 @@ BEGIN
   IsConsole := Platform.IsConsole(Platform.StdOut);
   in := 0
 END Out.
+

@@ -9,6 +9,7 @@ TYPE
 VAR
 	(* input event handling *)
 	readSet*, readySet*: FdSet;
+	TimeUnit*: LONGINT;  (* 1 sec *)
 
 	PROCEDURE -AincludeSelect "#include <sys/select.h>";
 	PROCEDURE -UnixSelect*(width: LONGINT; VAR readfds, writefds, exceptfds: FdSet; VAR timeout: Timeval): LONGINT
