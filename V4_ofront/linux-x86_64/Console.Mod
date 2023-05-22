@@ -86,3 +86,4 @@ MODULE Console;  (* J. Templ, 29-June-96 *)
 
 BEGIN pos := 0;
 END Console.
+
