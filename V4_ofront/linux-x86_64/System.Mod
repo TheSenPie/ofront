@@ -1,7 +1,7 @@
 MODULE System; (*JG 25.4.90 / NW 22.4.90, JT 21.01.93*)
 
 	IMPORT SYSTEM,
-		Modules, Files, Input, Display, Viewers, MenuViewers, Oberon, Fonts, Texts, TextFrames, Args,
+		Modules, Files, Input, Display, Viewers, MenuViewers, Oberon := v4oberon, Fonts, Texts := v4texts, TextFrames, Args,
 		Out, Console;
 
 	CONST
@@ -13,8 +13,10 @@ MODULE System; (*JG 25.4.90 / NW 22.4.90, JT 21.01.93*)
 		trapLevel: INTEGER;
 
 
-	PROCEDURE -halt(): LONGINT
-		"SYSTEM_halt";
+	PROCEDURE halt(): LONGINT
+	BEGIN
+		SYSTEM.HALT(0);
+	END halt;
 
 	PROCEDURE -assert(): LONGINT
 		"SYSTEM_assert";
@@ -25,8 +27,10 @@ MODULE System; (*JG 25.4.90 / NW 22.4.90, JT 21.01.93*)
 	PROCEDURE -setIntd(v: BOOLEAN)
 		"SYSTEM_interrupted = v";
 
-	PROCEDURE -FinalizeAll()
-		"SYSTEM_FINALL()";
+	PROCEDURE FinalizeAll;
+	BEGIN
+		Heap.FINALL;	
+	END FinalizeAll;
 
 	PROCEDURE -Locked(): BOOLEAN
 		"(SYSTEM_lock > 0)";

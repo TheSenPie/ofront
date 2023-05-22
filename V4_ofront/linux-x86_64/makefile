@@ -15,3 +15,6 @@ all:
 	voc -s v4texts.Mod
 	voc -s v4oberon.Mod
 	voc -s MenuViewers.Mod
+	voc -s Viewers.Mod
+	voc -s TextFrames.Mod
+	voc -s System.Mod

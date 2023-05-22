@@ -14,6 +14,8 @@ MODULE v4oberon; (*JG 6.9.90 / 23.9.93*)
 
 	TYPE
 
+		Handler* = PROCEDURE;
+
 		Painter* = PROCEDURE (x, y: INTEGER);
 		Marker* = RECORD Fade*, Draw*: Painter END;
 		
@@ -49,18 +51,17 @@ MODULE v4oberon; (*JG 6.9.90 / 23.9.93*)
 			id*, X*, Y*: INTEGER
 		END;
 
-		CopyOverMsg* = RECORD (Display.FrameMsg)
-			text*: Texts.Text;
-			beg*, end*: LONGINT
-		END;
 
 		CopyMsg* = RECORD (Display.FrameMsg)
 			F*: Display.Frame
 		END;
 
-		Task* = POINTER TO TaskDesc;
+		CopyOverMsg* = RECORD (Display.FrameMsg)
+			text*: Texts.Text;
+			beg*, end*: LONGINT
+		END;
 
-		Handler* = PROCEDURE;
+		Task* = POINTER TO TaskDesc;
 
 		TaskDesc* = RECORD
 			next: Task;
