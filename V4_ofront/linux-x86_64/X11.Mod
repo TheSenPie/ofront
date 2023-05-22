@@ -2,7 +2,7 @@ MODULE X11;	(* RC 12.10.92, JT 13.12.94 *)
 
 (* Oberon interface to X Window System Version 11 *)
 
-	IMPORT S := SYSTEM, Heap, Platform, Console, Args, LINUX64;
+	IMPORT S := SYSTEM, Heap, Platform, Console, Args, LINUX64, Kernel := v4kernel;
 
 	
 
@@ -1278,7 +1278,7 @@ MODULE X11;	(* RC 12.10.92, JT 13.12.94 *)
 
 		S.GET(display+8, fd);
 
-		INCL(LINUX64.readSet[0], fd);
+		INCL(Kernel.readSet[0], fd);
 
 		screen := DefaultScreen(display);
 

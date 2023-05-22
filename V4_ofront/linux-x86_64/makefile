@@ -1,6 +1,7 @@
 all: 
 	voc -s LINUX64.Mod
 	voc -s Platformunix.Mod
+	voc -s v4kernel.Mod
 	voc -s Heap.Mod
 	voc -s Out.Mod
 	voc -s Modules.Mod
@@ -12,5 +13,4 @@ all:
 	voc -s X11.Mod
 	voc -s Fonts.Mod
 	voc -s v4texts.Mod
-	voc -s v4kernel.Mod
 	voc -s v4oberon.Mod

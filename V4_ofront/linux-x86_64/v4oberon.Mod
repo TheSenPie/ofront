@@ -444,14 +444,14 @@ MODULE v4oberon; (*JG 6.9.90 / 23.9.93*)
 					END;
 					INC(i)
 				END ;
-				bufsize := Unix.ReadBlk(Unix.stdout, buf)
+				res := Platform.ReadBuf(Platform.StdOut, buf, bufsize)
 			UNTIL bufsize = 0;
-			res := Unix.Ftruncate(Unix.stdout, 0);
-			res := Unix.Lseek(Unix.stdout, 0, 0)
+			res := Platform.Truncate(Platform.StdOut, 0);
+			res := Platform.Seek(Platform.StdOut, 0, 0)
 		END ;
-		res := Platform.Close(Unix.stdin);
-		res := Platform.Close(Unix.stdout);
-		res := Platform.Close(Unix.stderr);
+		res := Platform.Close(Platform.StdIn);
+		res := Platform.Close(Platform.StdOut);
+		res := Platform.Close(Platform.StdErr);
 		fd := Unix.Dup(stdin);
 		fd := Unix.Dup(stdout);
 		fd := Unix.Dup(stderr);
@@ -539,7 +539,7 @@ MODULE v4oberon; (*JG 6.9.90 / 23.9.93*)
 			prevX, prevY, X, Y: INTEGER; keys: SET; ch: CHAR;
 			VM: Viewers.ViewerMsg; i: INTEGER; res: LONGINT;	(* << *)
 	BEGIN
-		res := Kernel.sigsetjmp(Kernel.trapEnv, 1);	(* << *)
+		(*res := Kernel.sigsetjmp(Kernel.trapEnv, 1);	(* << *)*)
 		LoopStarted := TRUE;
 		LOOP
 			CurTask := NIL;
